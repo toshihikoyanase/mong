@@ -39,5 +39,6 @@ class TestNameGenerator(unittest.TestCase):
         for _ in range(4):
             assert ng.get_random_name() == 'boring_tom'
 
+
 if __name__ == '__main__':
     unittest.main()

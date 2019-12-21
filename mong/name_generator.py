@@ -10,8 +10,8 @@ from typing import Tuple
 class NameGenerator(object):
 
     def __init__(self,
-                 moby_dicts: Optional[Dict[str, List[str]]]=None,
-                 seed: Optional[int]=None) -> None:
+                 moby_dicts: Optional[Dict[str, List[str]]] = None,
+                 seed: Optional[int] = None) -> None:
 
         if moby_dicts is None:
             path = os.path.join(os.path.dirname(__file__), 'moby_dict.json')
@@ -27,7 +27,7 @@ class NameGenerator(object):
             moby_dict = json.load(fin)
         return moby_dict['left'], moby_dict['right']
 
-    def get_random_name(self, retry: int=0) -> str:
+    def get_random_name(self, retry: int = 0) -> str:
         """
         This method　corresponds to GetRandomName in moby's namegenerator.
         The original code can be found in
