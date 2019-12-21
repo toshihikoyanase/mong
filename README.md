@@ -1,6 +1,7 @@
 # mong
 
 A Python port of [moby](https://github.com/moby/moby) name generator.
+The original code in [moby](https://github.com/moby/moby) can be found [here](https://github.com/moby/moby/blob/master/pkg/namesgenerator/names-generator.go).
 
 ## Installation
 
