@@ -50,9 +50,6 @@ class NameGenerator(object):
 
 
 if __name__ == '__main__':
-    # with open('mong/moby_dict.json') as fin:
-    #     moby_dict = json.load(fin)
-    #
     ng = NameGenerator()
     for _ in range(10):
         print(ng.get_random_name())
