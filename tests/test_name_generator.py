@@ -35,6 +35,9 @@ class TestNameGenerator(unittest.TestCase):
         with self.assertRaises(RecursionError):
             mong.NameGenerator({'left': ['boring'], 'right': ['wozniak']}).get_random_name()
 
+        ng = mong.NameGenerator({'left': ['boring'], 'right': ['wozniak', 'tom']})
+        for _ in range(4):
+            assert ng.get_random_name() == 'boring_tom'
 
 if __name__ == '__main__':
     unittest.main()
