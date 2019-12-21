@@ -31,6 +31,10 @@ class TestNameGenerator(unittest.TestCase):
         assert '_' in name
         assert self._re_number.search(name) is not None
 
+    def test_forbidden_name(self):
+        with self.assertRaises(RecursionError):
+            mong.NameGenerator({'left': ['boring'], 'right': ['wozniak']}).get_random_name()
+
 
 if __name__ == '__main__':
     unittest.main()
