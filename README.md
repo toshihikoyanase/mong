@@ -12,10 +12,7 @@ $ pip install https://github.com/toshihikoyanase/mong.git
 
 ```python
 >>> import mong
->>> ng = mong.NameGenerator
 >>> ng = mong.NameGenerator()
->>> ng.get_random_name()
-'goofy_robinson'
 >>> ng.get_random_name()
 'goofy_robinson'
 >>> ng.get_random_name()
