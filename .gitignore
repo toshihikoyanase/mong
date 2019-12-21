@@ -1,6 +1,7 @@
 build/
 dist/
 
+.python-version
 MANIFEST
 *.go
 *.pyc
