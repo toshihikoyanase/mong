@@ -29,7 +29,9 @@ class NameGenerator(object):
 
     def get_random_name(self, retry: int=0) -> str:
         """
-        This method is correspondingt to GetRandomName in moby's namegenerator.
+        This method　corresponds to GetRandomName in moby's namegenerator.
+        The original code can be found in
+        https://github.com/moby/moby/blob/master/pkg/namesgenerator/names-generator.go.
 
         It returns a string which is formatted as "<left>_<right>".
         Please note that a random integer between 0 to 10 will be added to the end of the name if
