@@ -11,7 +11,7 @@ def download_go_code() -> str:
 
     with urllib.request.urlopen(url) as response:
        code = response.read()
-    return code
+    return code.decode('utf-8')
 
 
 def read_go_code() -> str:
@@ -61,7 +61,8 @@ def extract_dict(code: str) -> Dict[str, List[str]]:
 
 if __name__ == '__main__':
     import pprint
-    go_code = read_go_code()
+    # go_code = read_go_code()
+    go_code = download_go_code()
     moby_dict = extract_dict(go_code)
     pprint.pprint(moby_dict)
     path = 'mong/moby_dict.json'
