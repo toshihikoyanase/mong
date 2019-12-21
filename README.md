@@ -6,7 +6,7 @@ The original code in [moby](https://github.com/moby/moby) can be found [here](ht
 ## Installation
 
 ```
-$ pip install https://github.com/toshihikoyanase/mong.git
+$ pip install git+https://github.com/toshihikoyanase/mong.git
 ```
 
 ## Usage
