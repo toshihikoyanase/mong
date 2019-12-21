@@ -11,6 +11,8 @@ $ pip install git+https://github.com/toshihikoyanase/mong.git
 
 ## Usage
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16iw3njq06R32-0dHiRn2efUvvZmYHeRL)
+
 ```python
 >>> import mong
 >>> ng = mong.NameGenerator()
