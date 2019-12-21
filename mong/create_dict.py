@@ -10,7 +10,7 @@ def download_go_code() -> str:
         'https://raw.githubusercontent.com/moby/moby/master/pkg/namesgenerator/names-generator.go'
 
     with urllib.request.urlopen(url) as response:
-       code = response.read()
+        code = response.read()
     return code.decode('utf-8')
 
 

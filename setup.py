@@ -7,5 +7,4 @@ setup(name='mong',
       author='Toshihiko Yanase',
       author_email='toshihiko.yanase@gmail.com',
       packages=['mong'],
-      package_data={'mong': ['moby_dict.json']},
-     )
+      package_data={'mong': ['moby_dict.json']})
