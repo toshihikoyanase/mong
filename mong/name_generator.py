@@ -45,7 +45,7 @@ class NameGenerator(object):
             return self.get_random_name(retry)
 
         if retry > 0:
-            name = '{}{}'.format(name, self._rng.randint(0, 10))
+            name = '{}{}'.format(name, self._rng.randint(0, 9))
         return name
 
 
