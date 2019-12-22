@@ -17,19 +17,19 @@ class TestNameGenerator(unittest.TestCase):
         generator = mong.NameGenerator(self._moby_dicts)
 
         name = generator.get_random_name()
-        assert '_' in name
-        assert self._re_number.search(name) is None
+        self.assertTrue('_' in name)
+        self.assertTrue(self._re_number.search(name) is None)
 
         name = generator.get_random_name(0)
-        assert '_' in name
-        assert self._re_number.search(name) is None
+        self.assertTrue('_' in name)
+        self.assertTrue(self._re_number.search(name) is None)
 
     def test_name_retries(self):
         generator = mong.NameGenerator(self._moby_dicts)
 
         name = generator.get_random_name(1)
-        assert '_' in name
-        assert self._re_number.search(name) is not None
+        self.assertTrue('_' in name)
+        self.assertTrue(self._re_number.search(name) is not None)
 
     def test_forbidden_name(self):
         with self.assertRaises(RecursionError):
@@ -37,7 +37,7 @@ class TestNameGenerator(unittest.TestCase):
 
         ng = mong.NameGenerator({'left': ['boring'], 'right': ['wozniak', 'tom']})
         for _ in range(4):
-            assert ng.get_random_name() == 'boring_tom'
+            self.assertEqual(ng.get_random_name(), 'boring_tom')
 
 
 if __name__ == '__main__':
