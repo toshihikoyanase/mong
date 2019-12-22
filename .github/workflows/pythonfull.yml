@@ -1,4 +1,4 @@
-name: FullTest
+name: test
 
 on: [push]
 
