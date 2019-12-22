@@ -31,6 +31,7 @@ jobs:
       run: |
         pip install codecov
         coverage run -m unittest discover tests
+        coverage xml
     - name: Report code coverage
       uses: codecov/codecov-action@v1
       with:
