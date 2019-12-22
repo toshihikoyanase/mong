@@ -27,13 +27,9 @@ class NameGenerator(object):
 
     def get_random_name(self, retry: int = 0) -> str:
         """
-        This method　corresponds to GetRandomName in moby's namegenerator.
-        The original code can be found in
-        https://github.com/moby/moby/blob/master/pkg/namesgenerator/names-generator.go.
+        Generate a random name.
 
-        It returns a string which is formatted as "<left>_<right>".
-        Please note that a random integer between 0 to 10 will be added to the end of the name if
-        retry is specified.
+        See `get_random_name` doc for further details.
         """
 
         name = '{}_{}'.format(random.choice(self._left), random.choice(self._right))
@@ -51,5 +47,15 @@ _name_generator = NameGenerator()
 
 
 def get_random_name(retry: int = 0) -> str:
+    """
+    Generate a random name.
+
+    This function corresponds to GetRandomName() in moby's namegenerator in the following file:
+    https://github.com/moby/moby/blob/master/pkg/namesgenerator/names-generator.go.
+
+    It returns a string which is formatted as "<left>_<right>".
+    Please note that a random integer between 0 to 10 will be added to the end of the name if
+    retry is specified.
+    """
 
     return _name_generator.get_random_name(retry)
