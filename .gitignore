@@ -1,7 +1,10 @@
+.mypy_cache/
 build/
 dist/
 
-.python-version
-MANIFEST
 *.go
 *.pyc
+.coverage
+.python-version
+coverage.xml
+MANIFEST
