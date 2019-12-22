@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 
-def load_readme():
+def load_readme() -> str:
     with open('README.md') as fin:
         return fin.read()
 
