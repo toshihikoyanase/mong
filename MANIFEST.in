@@ -1,1 +1,2 @@
 include mong/*.json
+include README.md
