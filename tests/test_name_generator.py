@@ -14,22 +14,26 @@ class TestNameGenerator(unittest.TestCase):
         }
 
     def test_name_format(self):
-        generator = mong.NameGenerator(self._moby_dicts)
+        for moby_dict in [None, self._moby_dicts]:
+            with self.subTest(moby_dict=moby_dict):
+                generator = mong.NameGenerator(moby_dict)
 
-        name = generator.get_random_name()
-        self.assertTrue('_' in name)
-        self.assertTrue(self._re_number.search(name) is None)
+                name = generator.get_random_name()
+                self.assertTrue('_' in name)
+                self.assertTrue(self._re_number.search(name) is None)
 
-        name = generator.get_random_name(0)
-        self.assertTrue('_' in name)
-        self.assertTrue(self._re_number.search(name) is None)
+                name = generator.get_random_name(0)
+                self.assertTrue('_' in name)
+                self.assertTrue(self._re_number.search(name) is None)
 
     def test_name_retries(self):
-        generator = mong.NameGenerator(self._moby_dicts)
+        for moby_dict in [None, self._moby_dicts]:
+            with self.subTest(moby_dict=moby_dict):
+                generator = mong.NameGenerator(moby_dict)
 
-        name = generator.get_random_name(1)
-        self.assertTrue('_' in name)
-        self.assertTrue(self._re_number.search(name) is not None)
+                name = generator.get_random_name(1)
+                self.assertTrue('_' in name)
+                self.assertTrue(self._re_number.search(name) is not None)
 
     def test_forbidden_name(self):
         with self.assertRaises(RecursionError):
