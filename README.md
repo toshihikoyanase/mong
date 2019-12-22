@@ -1,7 +1,7 @@
 # mong
 
 ![](https://github.com/toshihikoyanase/mong/workflows/Python%20application/badge.svg)
-
+[![codecov](https://codecov.io/gh/toshihikoyanase/mong/branch/master/graph/badge.svg)](https://codecov.io/gh/toshihikoyanase/mong)
 
 A Python port of [moby](https://github.com/moby/moby) name generator.
 The original code in [moby](https://github.com/moby/moby) can be found [here](https://github.com/moby/moby/blob/master/pkg/namesgenerator/names-generator.go).
