@@ -16,17 +16,17 @@ class TestCreateDict(unittest.TestCase):
 
         code = """
 var (
-	left = [...]string{
-		"admiring",
-		"zen",
-	}
-	right = [...]string{
-		// Muhammad ibn Jābir al-Ḥarrānī al-Battānī
-		"albattani",
+    left = [...]string{
+        "admiring",
+        "zen",
+    }
+    right = [...]string{
+        // Muhammad ibn Jābir al-Ḥarrānī al-Battānī
+        "albattani",
 
-		// Frances E. Allen
-		"allen",
-	}
+        // Frances E. Allen
+        "allen",
+    }
 )
         """
 
