@@ -14,12 +14,6 @@ def download_go_code() -> str:
     return code.decode('utf-8')
 
 
-def read_go_code() -> str:
-    with open('./names-generator.go') as fin:
-        code = fin.read()
-    return code
-
-
 def extract_dict(code: str) -> Dict[str, List[str]]:
     is_left = False
     is_right = False
@@ -60,11 +54,7 @@ def extract_dict(code: str) -> Dict[str, List[str]]:
 
 
 if __name__ == '__main__':
-    import pprint
-    # go_code = read_go_code()
-    go_code = download_go_code()
-    moby_dict = extract_dict(go_code)
-    pprint.pprint(moby_dict)
+    moby_dict = extract_dict(download_go_code())
     path = 'mong/moby_dict.json'
     with open(path, 'w') as fout:
         json.dump(moby_dict, fout, indent=4)
