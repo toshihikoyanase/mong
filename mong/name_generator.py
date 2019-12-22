@@ -47,9 +47,3 @@ class NameGenerator(object):
         if retry > 0:
             name = '{}{}'.format(name, self._rng.randint(0, 9))
         return name
-
-
-if __name__ == '__main__':
-    ng = NameGenerator()
-    for _ in range(10):
-        print(ng.get_random_name())
