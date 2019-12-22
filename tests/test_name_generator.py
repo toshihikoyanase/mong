@@ -42,7 +42,3 @@ class TestNameGenerator(unittest.TestCase):
         ng = mong.NameGenerator({'left': ['boring'], 'right': ['wozniak', 'tom']})
         for _ in range(4):
             self.assertEqual(ng.get_random_name(), 'boring_tom')
-
-
-if __name__ == '__main__':
-    unittest.main()
