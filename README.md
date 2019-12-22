@@ -19,10 +19,9 @@ $ pip install git+https://github.com/toshihikoyanase/mong.git
 
 ```python
 >>> import mong
->>> ng = mong.NameGenerator()
->>> ng.get_random_name()
+>>> mong.get_random_name()
 'goofy_robinson'
->>> ng.get_random_name()
+>>> mong.get_random_name()
 'stoic_feynman'
 ```
 

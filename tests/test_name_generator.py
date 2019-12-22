@@ -42,3 +42,16 @@ class TestNameGenerator(unittest.TestCase):
         ng = mong.NameGenerator({'left': ['boring'], 'right': ['wozniak', 'tom']})
         for _ in range(4):
             self.assertEqual(ng.get_random_name(), 'boring_tom')
+
+    def test_get_random_name(self):
+        name = mong.get_random_name()
+        self.assertTrue('_' in name)
+        self.assertTrue(self._re_number.search(name) is None)
+
+        name = mong.get_random_name(0)
+        self.assertTrue('_' in name)
+        self.assertTrue(self._re_number.search(name) is None)
+
+        name = mong.get_random_name(1)
+        self.assertTrue('_' in name)
+        self.assertTrue(self._re_number.search(name) is not None)
