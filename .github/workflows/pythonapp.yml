@@ -29,4 +29,8 @@ jobs:
         mypy --disallow-untyped-defs --ignore-missing-imports .
     - name: Test with unittest
       run: |
-        python -m unittest discover tests
+        pip install codecov
+        coverage run -m unittest discover tests
+    - name: Report code coverage
+      run: |
+        codecov
