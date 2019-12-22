@@ -10,8 +10,7 @@ from typing import Tuple
 class NameGenerator(object):
 
     def __init__(self,
-                 moby_dicts: Optional[Dict[str, List[str]]] = None,
-                 seed: Optional[int] = None) -> None:
+                 moby_dicts: Optional[Dict[str, List[str]]] = None) -> None:
 
         if moby_dicts is None:
             path = os.path.join(os.path.dirname(__file__), 'moby_dict.json')
@@ -19,7 +18,6 @@ class NameGenerator(object):
         else:
             self._left = moby_dicts['left']
             self._right = moby_dicts['right']
-        self._rng = random.Random(seed)
 
     def _load_dict(self, path: str) -> Tuple[List[str], List[str]]:
 
@@ -38,12 +36,20 @@ class NameGenerator(object):
         retry is specified.
         """
 
-        name = '{}_{}'.format(self._rng.choice(self._left), self._rng.choice(self._right))
+        name = '{}_{}'.format(random.choice(self._left), random.choice(self._right))
 
         # Steve Wozniak is not boring.
         if name == 'boring_wozniak':
             return self.get_random_name(retry)
 
         if retry > 0:
-            name = '{}{}'.format(name, self._rng.randint(0, 9))
+            name = '{}{}'.format(name, random.randint(0, 9))
         return name
+
+
+_name_generator = NameGenerator()
+
+
+def get_random_name(retry: int = 0) -> str:
+
+    return _name_generator.get_random_name(retry)
