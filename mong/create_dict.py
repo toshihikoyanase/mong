@@ -4,10 +4,10 @@ from typing import Dict
 from typing import List
 import urllib.request
 
+GO_URL = 'https://raw.githubusercontent.com/moby/moby/master/pkg/namesgenerator/names-generator.go'
 
-def download_go_code() -> str:
-    url = \
-        'https://raw.githubusercontent.com/moby/moby/master/pkg/namesgenerator/names-generator.go'
+
+def download_go_code(url: str) -> str:
 
     with urllib.request.urlopen(url) as response:
         code = response.read()
@@ -15,6 +15,7 @@ def download_go_code() -> str:
 
 
 def extract_dict(code: str) -> Dict[str, List[str]]:
+
     is_left = False
     is_right = False
 
@@ -53,9 +54,13 @@ def extract_dict(code: str) -> Dict[str, List[str]]:
     }
 
 
-if __name__ == '__main__':
-    moby_dict = extract_dict(download_go_code())
-    path = 'mong/moby_dict.json'
-    with open(path, 'w') as fout:
+def create_dict(url: str, filepath: str) -> None:
+
+    go_code = download_go_code(url)
+    moby_dict = extract_dict(go_code)
+    with open(filepath, 'w') as fout:
         json.dump(moby_dict, fout, indent=4)
-    print('Save moby dict to {}.'.format(path))
+
+
+if __name__ == '__main__':
+    create_dict(GO_URL, 'mong/moby_dict.json')
