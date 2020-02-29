@@ -1,2 +1,3 @@
 include mong/*.json
 include README.md
+include LICENSE
