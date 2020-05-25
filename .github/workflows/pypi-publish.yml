@@ -1,4 +1,4 @@
-name: Publish Python distributions to TestPyPI
+name: Publish Python distributions to TestPyPI and PyPI
 
 # Only activate if we add the v* tag to the master branch.
 on:
@@ -45,3 +45,11 @@ jobs:
         user: __token__
         password: ${{ secrets.test_pypi_password }}
         repository_url: https://test.pypi.org/legacy/
+
+    - name: Publish distribution to PyPI
+      # Do not upload the package from forked repository.
+      if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')  && github.repository == 'toshihikoyanase/mong'
+      uses: pypa/gh-action-pypi-publish@v1.1.0
+      with:
+        user: __token__
+        password: ${{ secrets.pypi_password }}
