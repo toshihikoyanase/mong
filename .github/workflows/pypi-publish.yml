@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-n-publish:
-    name: Build and publish Python distributions to TestPyPI
+    name: Build and publish Python distributions to TestPyPI and PyPI
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
