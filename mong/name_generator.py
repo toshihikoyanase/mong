@@ -56,6 +56,11 @@ def get_random_name(retry: int = 0) -> str:
     It returns a string which is formatted as "<left>_<right>".
     Please note that a random integer between 0 to 10 will be added to the end of the name if
     retry is specified.
+
+    Args:
+        retry:
+            A flag to add a random integer at the end of the name. If ``retry`` > 0, the integer
+            will be added. The default is 0.
     """
 
     return _name_generator.get_random_name(retry)
