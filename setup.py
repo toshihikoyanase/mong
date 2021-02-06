@@ -28,5 +28,5 @@ setup(
         "Programming Language :: Python :: 3 :: Only",
     ],
     packages=["mong"],
-    package_data={"mong": ["moby_dict.json"]},
+    package_data={"mong": ["moby_dict.json", "py.typed"]},
 )
