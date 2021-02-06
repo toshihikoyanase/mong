@@ -9,7 +9,7 @@ import mong.create_dict
 
 class TestCreateDict(unittest.TestCase):
 
-    def setUp(self):
+    def setUp(self) -> None:
 
         self.tmp_dir = tempfile.mkdtemp()
         self.go_file = os.path.join(self.tmp_dir, 'namesgenerator.go')
@@ -33,14 +33,14 @@ class TestCreateDict(unittest.TestCase):
         with open(self.go_file, 'w') as fout:
             print(self.go_code, file=fout)
 
-    def test_download_go_code(self):
+    def test_download_go_code(self) -> None:
 
         code = mong.create_dict.download_go_code(self.go_url)
 
         self.assertTrue('left =' in code)
         self.assertTrue('right =' in code)
 
-    def test_extract_dict(self):
+    def test_extract_dict(self) -> None:
 
         moby_dict = mong.create_dict.extract_dict(self.go_code)
 
@@ -49,7 +49,7 @@ class TestCreateDict(unittest.TestCase):
         self.assertEqual(moby_dict['left'], ['admiring', 'zen'])
         self.assertEqual(moby_dict['right'], ['albattani', 'allen'])
 
-    def test_create_dict(self):
+    def test_create_dict(self) -> None:
 
         tmp_file = os.path.join(self.tmp_dir, 'tmp_dict.json')
         mong.create_dict.create_dict(self.go_url, tmp_file)
@@ -60,6 +60,6 @@ class TestCreateDict(unittest.TestCase):
         self.assertTrue('left' in moby_dict)
         self.assertTrue('right' in moby_dict)
 
-    def tearDown(self):
+    def tearDown(self) -> None:
 
         shutil.rmtree(self.tmp_dir)
