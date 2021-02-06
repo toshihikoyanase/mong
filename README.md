@@ -1,6 +1,6 @@
 # mong
 
-[![Python](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7%20%7C%203.8-blue)](https://www.python.org)
+[![Python](https://img.shields.io/badge/python-3.6%20%7C%203.7%20%7C%203.8%20%7C%203.9-blue)](https://www.python.org)
 [![pypi](https://img.shields.io/pypi/v/mong.svg)](https://pypi.python.org/pypi/mong)
 ![](https://github.com/toshihikoyanase/mong/workflows/test/badge.svg)
 [![codecov](https://codecov.io/gh/toshihikoyanase/mong/branch/master/graph/badge.svg)](https://codecov.io/gh/toshihikoyanase/mong)
