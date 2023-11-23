@@ -8,7 +8,7 @@ def load_readme() -> str:
 
 setup(
     name="mong",
-    version="0.0.3a2",
+    version="0.0.3a3",
     description="Moby Name Generator in Python",
     long_description=load_readme(),
     long_description_content_type="text/markdown",
@@ -21,10 +21,12 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: 3 :: Only",
     ],
     packages=["mong"],
