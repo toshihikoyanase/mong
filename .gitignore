@@ -1,6 +1,7 @@
 .mypy_cache/
 build/
 dist/
+*.egg-info/
 
 *.go
 *.pyc
