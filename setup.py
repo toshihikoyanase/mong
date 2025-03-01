@@ -8,7 +8,7 @@ def load_readme() -> str:
 
 setup(
     name="mong",
-    version="0.0.3a3",
+    version="0.0.3",
     description="Moby Name Generator in Python",
     long_description=load_readme(),
     long_description_content_type="text/markdown",
