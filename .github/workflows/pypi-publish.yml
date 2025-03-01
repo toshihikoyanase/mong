@@ -36,7 +36,8 @@ jobs:
       with:
         user: __token__
         password: ${{ secrets.test_pypi_password }}
-        repository_url: https://test.pypi.org/legacy/
+        repository-url: https://test.pypi.org/legacy/
+        attestations: false
 
     - name: Publish distribution to PyPI
       # Do not upload the package from forked repository.
@@ -45,3 +46,4 @@ jobs:
       with:
         user: __token__
         password: ${{ secrets.pypi_password }}
+        attestations: false
