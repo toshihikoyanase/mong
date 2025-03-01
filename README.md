@@ -34,3 +34,10 @@ $ pip install git+https://github.com/toshihikoyanase/mong.git
 
 - [Moby Project](https://mobyproject.org/)
 - [moby/moby@GitHub](https://github.com/moby/moby)
+
+
+## License
+
+This project is licensed under the MIT License (see [LICENSE](./LICENSE)).
+
+Mong includes code from the [Moby](https://github.com/moby/moby) project (see [THIRD_PARTY_LICENSES](./THIRD_PARTY_LICENSES)).
