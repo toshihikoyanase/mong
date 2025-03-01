@@ -32,14 +32,14 @@ class NameGenerator(object):
         See `get_random_name` doc for further details.
         """
 
-        name = '{}_{}'.format(random.choice(self._left), random.choice(self._right))
+        name = f'{random.choice(self._left)}_{random.choice(self._right)}'
 
         # Steve Wozniak is not boring.
         if name == 'boring_wozniak':
             return self.get_random_name(retry)
 
         if retry > 0:
-            name = '{}{}'.format(name, random.randint(0, 9))
+            name = f'{name}{random.randint(0, 9)}'
         return name
 
 

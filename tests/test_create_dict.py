@@ -13,7 +13,7 @@ class TestCreateDict(unittest.TestCase):
 
         self.tmp_dir = tempfile.mkdtemp()
         self.go_file = os.path.join(self.tmp_dir, 'namesgenerator.go')
-        self.go_url = 'file://{}'.format(self.go_file)
+        self.go_url = f'file://{self.go_file}'
         self.go_code = """
         var (
             left = [...]string{
