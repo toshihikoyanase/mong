@@ -10,12 +10,10 @@ The original code in [moby](https://github.com/moby/moby) can be found [here](ht
 
 ## Installation
 
-```
-# PyPI
-$ pip install mong
+Install mong via pip:
 
-# Development version
-$ pip install git+https://github.com/toshihikoyanase/mong.git
+```console
+pip install mong
 ```
 
 ## Usage
