@@ -18,7 +18,14 @@ pip install mong
 
 ## Usage
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16iw3njq06R32-0dHiRn2efUvvZmYHeRL)
+You can generate a random name with just two lines of code:
+
+```python
+import mong
+print(mong.get_random_name())
+```
+
+Example usage:
 
 ```python
 >>> import mong
@@ -27,6 +34,10 @@ pip install mong
 >>> mong.get_random_name()
 'stoic_feynman'
 ```
+
+Try mong in Google Colab:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16iw3njq06R32-0dHiRn2efUvvZmYHeRL)
+
 
 ## References
 
